@@ -6,11 +6,16 @@
 //
 
 import SwiftUI
+import Firebase
+
 
 struct LoginScreen: View {
-    @State var email_text: String = ""
-    @State var password_text: String = ""
-    
+    @State var email_text: String = "raj@gmail.com"
+    @State var password_text: String = "12345678"
+    @State var email_message: String = "Email"
+    @State var password_message: String = "Password"
+    @State var showingAlert = false
+    @State var isDone = false
     
     var body: some View {
         NavigationView {
@@ -23,7 +28,7 @@ struct LoginScreen: View {
                         .frame(width: 320, height: 70, alignment: .center)
                         .foregroundColor(.white)
                         .overlay(
-                            TextField("Email", text: $email_text)
+                            TextField(email_message, text: $email_text)
                                 .foregroundColor(Color("BrandBlue"))
                                 .font(.system(size: 20))
                                 .multilineTextAlignment(.center)
@@ -34,33 +39,19 @@ struct LoginScreen: View {
                         .frame(width: 320, height: 70, alignment: .center)
                         .foregroundColor(.white)
                         .overlay(
-                            SecureField("Password", text: $password_text)
+                            SecureField(password_message, text: $password_text)
                                 .foregroundColor(Color("BrandBlue"))
                                 .font(.system(size: 20))
                                 .multilineTextAlignment(.center)
                                 .textInputAutocapitalization(.never)
                         )
                     
-                    NavigationLink {
-                        //go to camera view
-                        
-                        ViewControllerRepresentable()
-                            .navigationBarBackButtonHidden(true)
-                        
-                    } label: {
-                        Text("Login")
-                            .padding()
-                            .foregroundColor(.white)
-                            .font(.system(size: 25))
-                    }
-                    
-                    Spacer()
-                }.offset(y: 90)
+                }
+                
             }
         }
     }
 }
-
 struct LoginScreen_Previews: PreviewProvider {
     static var previews: some View {
         LoginScreen()
@@ -79,3 +70,4 @@ struct ViewControllerRepresentable: UIViewControllerRepresentable {
     }
     
 }
+    
