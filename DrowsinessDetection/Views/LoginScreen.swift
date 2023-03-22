@@ -10,12 +10,12 @@ import Firebase
 
 
 struct LoginScreen: View {
-    @State var email_text: String = "raj@gmail.com"
-    @State var password_text: String = "12345678"
+    @State var email_text: String = ""
+    @State var password_text: String = ""
     @State var email_message: String = "Email"
     @State var password_message: String = "Password"
     @State var showingAlert = false
-    @State var isDone = false
+    @State var isLoggedIn = false
     
     var body: some View {
         NavigationView {
@@ -46,8 +46,38 @@ struct LoginScreen: View {
                                 .textInputAutocapitalization(.never)
                         )
                     
-                }
+                    Button {
+                        
+                        Auth.auth().signIn(withEmail: email_text, password: password_text) { authResult, error in
+                            if let e = error {
+                                email_text = ""
+                                password_text = ""
+                                showingAlert = true
+                                print(e)
+                            } else {
+                                isLoggedIn = true
+                            }
+                        }
+                        
+                    } label: {
+                        Text("Login")
+                            .font(.system(size: 20))
+                            .padding()
+                            .foregroundColor(.white)
+                    }
+
+                    
+                    
+                    NavigationLink(destination: ViewControllerRepresentable().navigationBarBackButtonHidden(true), isActive: $isLoggedIn) {
+                        EmptyView()
+                    }
+                    
+                    Spacer()
+                    
+                }.offset(y: 100)
                 
+            }.alert(isPresented: $showingAlert) {
+                Alert(title: Text("Some error occurred"), message: Text("Try entering email and password again"), dismissButton: .default(Text("Got it!")))
             }
         }
     }
