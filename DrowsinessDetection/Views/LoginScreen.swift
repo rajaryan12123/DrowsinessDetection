@@ -34,6 +34,10 @@ struct LoginScreen: View {
                     
                     NavigationLink {
                         //go to camera view
+                        
+                        ViewControllerRepresentable()
+                            .navigationBarBackButtonHidden(true)
+                        
                     } label: {
                         Text("Login")
                             .padding()
@@ -52,4 +56,17 @@ struct LoginScreen_Previews: PreviewProvider {
     static var previews: some View {
         LoginScreen()
     }
+}
+
+struct ViewControllerRepresentable: UIViewControllerRepresentable {
+    func makeUIViewController(context: Context) -> some UIViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        
+        return vc
+    }
+    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+        
+    }
+    
 }
