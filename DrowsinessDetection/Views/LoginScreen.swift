@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct LoginScreen: View {
+    @State var email_text: String = ""
+    @State var password_text: String = ""
+    
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -19,17 +23,22 @@ struct LoginScreen: View {
                         .frame(width: 320, height: 70, alignment: .center)
                         .foregroundColor(.white)
                         .overlay(
-                            Text("Email")
-                                .foregroundColor(Color.blue)
+                            TextField("Email", text: $email_text)
+                                .foregroundColor(Color("BrandBlue"))
                                 .font(.system(size: 20))
+                                .multilineTextAlignment(.center)
+                                .textInputAutocapitalization(.never)
                         )
+                    
                     RoundedRectangle(cornerRadius: 30)
                         .frame(width: 320, height: 70, alignment: .center)
                         .foregroundColor(.white)
                         .overlay(
-                            Text("Password")
-                                .foregroundColor(Color.blue)
+                            SecureField("Password", text: $password_text)
+                                .foregroundColor(Color("BrandBlue"))
                                 .font(.system(size: 20))
+                                .multilineTextAlignment(.center)
+                                .textInputAutocapitalization(.never)
                         )
                     
                     NavigationLink {
