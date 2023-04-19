@@ -7,5 +7,6 @@ target 'DrowsinessDetection' do
 
   # Pods for DrowsinessDetection
 	pod 'Firebase/Auth'
+  pod 'Gifu'
 	pod 'Firebase/Firestore'
 end

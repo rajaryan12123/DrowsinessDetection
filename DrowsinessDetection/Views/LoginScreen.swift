@@ -16,6 +16,7 @@ struct LoginScreen: View {
     @State var password_message: String = "Password"
     @State var showingAlert = false
     @State var isLoggedIn = false
+    @State var isIn = false
     
     var body: some View {
         NavigationView {
@@ -72,6 +73,24 @@ struct LoginScreen: View {
                         EmptyView()
                     }
                     
+                    
+                    Button {
+                        
+                        isIn = true
+                        
+                    } label: {
+                        Text("Try Face Detection")
+                            .font(.system(size: 20))
+                            .padding()
+                            .foregroundColor(.white)
+                    }
+
+                    
+                    
+                    NavigationLink(destination: ViewControllerRepresentablee().navigationBarBackButtonHidden(true), isActive: $isIn) {
+                        EmptyView()
+                    }
+                    
                     Spacer()
                     
                 }.offset(y: 100)
@@ -100,4 +119,29 @@ struct ViewControllerRepresentable: UIViewControllerRepresentable {
     }
     
 }
+
+struct ViewControllerRepresentablee: UIViewControllerRepresentable {
+    func makeUIViewController(context: Context) -> some UIViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "FaceDetectController") as! FaceDetectController
+        
+        return vc
+    }
+    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+        
+    }
     
+}
+
+
+//
+//struct SecondViewRepresentable: UIViewRepresentable {
+//
+//
+//    func makeUIViewController(context: Context) -> some UIViewController {
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let vc = storyboard.instantiateInitialViewController(withIdentifier: "") as? SecondView
+//    }
+//
+//
+//}

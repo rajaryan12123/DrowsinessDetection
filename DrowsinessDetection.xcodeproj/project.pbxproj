@@ -11,6 +11,7 @@
 		7C178AE829CB43ED00D172B8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C178AE729CB43ED00D172B8 /* GoogleService-Info.plist */; };
 		7C39C9B129CAEF2B00E1075B /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C39C9B029CAEF2B00E1075B /* LoginScreen.swift */; };
 		7C39C9B329CAF2C500E1075B /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C39C9B229CAF2C500E1075B /* RegisterScreen.swift */; };
+		7C4DCA0B29F0729D00158F65 /* FaceDetectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4DCA0A29F0729D00158F65 /* FaceDetectController.swift */; };
 		7C6DFB1529CA3A24009FDC38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6DFB1429CA3A24009FDC38 /* AppDelegate.swift */; };
 		7C6DFB1729CA3A24009FDC38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6DFB1629CA3A24009FDC38 /* SceneDelegate.swift */; };
 		7C6DFB1929CA3A24009FDC38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6DFB1829CA3A24009FDC38 /* ViewController.swift */; };
@@ -19,6 +20,10 @@
 		7C6DFB2129CA3A26009FDC38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C6DFB1F29CA3A26009FDC38 /* LaunchScreen.storyboard */; };
 		7C6DFB2A29CA3F2C009FDC38 /* WelcomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6DFB2929CA3F2C009FDC38 /* WelcomeScreen.swift */; };
 		7C6DFB2C29CA4484009FDC38 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6DFB2B29CA4484009FDC38 /* WelcomeViewController.swift */; };
+		7C9557ED29F077E00024B039 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9557EC29F077E00024B039 /* SecondViewController.swift */; };
+		7C9CDAA129F01CD300205856 /* FaceDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9CDAA029F01CD300205856 /* FaceDetector.swift */; };
+		7C9CDAA329F01D6500205856 /* FaceDetectorFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9CDAA229F01D6500205856 /* FaceDetectorFilter.swift */; };
+		7C9CDAA529F01D7F00205856 /* SequenceSmoother.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9CDAA429F01D7F00205856 /* SequenceSmoother.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,7 @@
 		7C178AE729CB43ED00D172B8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7C39C9B029CAEF2B00E1075B /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		7C39C9B229CAF2C500E1075B /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
+		7C4DCA0A29F0729D00158F65 /* FaceDetectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceDetectController.swift; sourceTree = "<group>"; };
 		7C6DFB1129CA3A24009FDC38 /* DrowsinessDetection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrowsinessDetection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C6DFB1429CA3A24009FDC38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C6DFB1629CA3A24009FDC38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +42,10 @@
 		7C6DFB2229CA3A26009FDC38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C6DFB2929CA3F2C009FDC38 /* WelcomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreen.swift; sourceTree = "<group>"; };
 		7C6DFB2B29CA4484009FDC38 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		7C9557EC29F077E00024B039 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		7C9CDAA029F01CD300205856 /* FaceDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceDetector.swift; sourceTree = "<group>"; };
+		7C9CDAA229F01D6500205856 /* FaceDetectorFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceDetectorFilter.swift; sourceTree = "<group>"; };
+		7C9CDAA429F01D7F00205856 /* SequenceSmoother.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceSmoother.swift; sourceTree = "<group>"; };
 		B2BF7A6826388A2668569F6E /* Pods-DrowsinessDetection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrowsinessDetection.release.xcconfig"; path = "Target Support Files/Pods-DrowsinessDetection/Pods-DrowsinessDetection.release.xcconfig"; sourceTree = "<group>"; };
 		D011C5C2C41FE266CDBF8C68 /* Pods-DrowsinessDetection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrowsinessDetection.debug.xcconfig"; path = "Target Support Files/Pods-DrowsinessDetection/Pods-DrowsinessDetection.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,7 +68,6 @@
 				D011C5C2C41FE266CDBF8C68 /* Pods-DrowsinessDetection.debug.xcconfig */,
 				B2BF7A6826388A2668569F6E /* Pods-DrowsinessDetection.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -107,12 +116,25 @@
 		7C6DFB2829CA3EE4009FDC38 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7C4DCA0A29F0729D00158F65 /* FaceDetectController.swift */,
+				7C9557EC29F077E00024B039 /* SecondViewController.swift */,
 				7C6DFB1829CA3A24009FDC38 /* ViewController.swift */,
+				7C9CDA9F29F01CBE00205856 /* ModelWork */,
 				7C39C9B629CB047100E1075B /* First Screen */,
 				7C39C9B229CAF2C500E1075B /* RegisterScreen.swift */,
 				7C39C9B029CAEF2B00E1075B /* LoginScreen.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		7C9CDA9F29F01CBE00205856 /* ModelWork */ = {
+			isa = PBXGroup;
+			children = (
+				7C9CDAA029F01CD300205856 /* FaceDetector.swift */,
+				7C9CDAA229F01D6500205856 /* FaceDetectorFilter.swift */,
+				7C9CDAA429F01D7F00205856 /* SequenceSmoother.swift */,
+			);
+			path = ModelWork;
 			sourceTree = "<group>";
 		};
 		E9A92E820B10D1AB2AA2E46C /* Frameworks */ = {
@@ -239,13 +261,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C9557ED29F077E00024B039 /* SecondViewController.swift in Sources */,
 				7C6DFB1929CA3A24009FDC38 /* ViewController.swift in Sources */,
+				7C9CDAA329F01D6500205856 /* FaceDetectorFilter.swift in Sources */,
 				7C6DFB2C29CA4484009FDC38 /* WelcomeViewController.swift in Sources */,
 				7C6DFB1529CA3A24009FDC38 /* AppDelegate.swift in Sources */,
+				7C9CDAA129F01CD300205856 /* FaceDetector.swift in Sources */,
 				7C39C9B329CAF2C500E1075B /* RegisterScreen.swift in Sources */,
 				7C6DFB2A29CA3F2C009FDC38 /* WelcomeScreen.swift in Sources */,
 				7C6DFB1729CA3A24009FDC38 /* SceneDelegate.swift in Sources */,
+				7C4DCA0B29F0729D00158F65 /* FaceDetectController.swift in Sources */,
 				7C39C9B129CAEF2B00E1075B /* LoginScreen.swift in Sources */,
+				7C9CDAA529F01D7F00205856 /* SequenceSmoother.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
